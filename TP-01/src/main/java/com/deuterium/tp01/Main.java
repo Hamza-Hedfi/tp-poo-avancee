@@ -9,7 +9,7 @@ public class Main {
         graphique.elementsGraphique.add(new Segment(
                 new Point[]{
                         new Point(1.01, 5.014),
-                        new Point(1.01, 5.014)
+                        new Point(78.01, 7.0244)
 
                 })
         );

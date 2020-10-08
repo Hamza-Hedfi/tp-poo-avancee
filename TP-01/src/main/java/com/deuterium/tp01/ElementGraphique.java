@@ -7,4 +7,5 @@ public interface ElementGraphique {
     }
 
     void deplacer(Double deltaX, Double deltaY);
+
 }
