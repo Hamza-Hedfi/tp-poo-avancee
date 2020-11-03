@@ -53,6 +53,5 @@ public class MainFrame extends Frame {
 
         setLocationRelativeTo(null);
 
-        setVisible(true);
     }
 }
