@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.awt.*;
 
 public class RBPanel extends Panel {
@@ -10,8 +9,8 @@ public class RBPanel extends Panel {
     public RBPanel(){
         checkboxGroup = new CheckboxGroup();
         solarisCheckbox = new Checkbox("Solaris", checkboxGroup, false);
-        linuxCheckbox = new Checkbox("Solaris", checkboxGroup, true);
-        aixCheckbox = new Checkbox("Solaris", checkboxGroup, true);
+        linuxCheckbox = new Checkbox("Linux", checkboxGroup, true);
+        aixCheckbox = new Checkbox("Aix", checkboxGroup, true);
 
 //        setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         setLayout(new FlowLayout(FlowLayout.LEFT));
