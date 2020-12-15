@@ -1,13 +1,10 @@
 package com.deuterium;
 
-import com.deuterium.dao.UserDAO;
-import com.deuterium.dao.UserDAOImplJDBC;
-import com.deuterium.model.User;
-import com.deuterium.util.ExceptionHandler;
+import com.deuterium.controller.UserController;
 
 public class TP10 {
     public static void main(String[] args) {
-        UserDAO userDAO = new UserDAOImplJDBC();
+       /* UserDAO userDAO = new UserDAOImplJDBC();
 
         try {
 
@@ -22,6 +19,10 @@ public class TP10 {
             System.out.println(userDAO.delete("dddd"));
         } catch (Exception exception) {
             ExceptionHandler.handleException(exception);
-        }
+        }*/
+        // SwingUtilities.invokeLater(UserView::new);
+
+        new UserController();
+
     }
 }
