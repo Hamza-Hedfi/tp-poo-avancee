@@ -41,6 +41,7 @@ public class UserView extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+
     }
 
 }
