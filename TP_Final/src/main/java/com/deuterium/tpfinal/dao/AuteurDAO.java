@@ -32,15 +32,21 @@ public class AuteurDAO implements CRUDOperations<Auteur, String> {
 
     @Override
     public Auteur getById(String orcid) throws SQLException, AuteurNotFoundException {
+        String sqlSelect = "SELECT * FROM auteur WHERE orcid = ?";
         Auteur auteur = null;
-        try (Connection connection = getInstance().getConnection()) {
-            String sqlSelect = "SELECT * FROM auteur WHERE orcid = ?";
-            PreparedStatement statement = connection.prepareStatement(sqlSelect);
+        try (
+                Connection connection = getInstance().getConnection();
+                PreparedStatement statement = connection.prepareStatement(sqlSelect);
+        ) {
+
+            final Statement statement1 = connection.createStatement();
+
             statement.setString(1, orcid);
 
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (!resultSet.next())
                     throw new AuteurNotFoundException("Auteur avec l'ORCID(" + orcid + ") n'existe pas!");
+
 
                 auteur = new Auteur();
 
